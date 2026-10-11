@@ -6,6 +6,7 @@ core=(tmux fzf btop trash-cli)
 apps=(foot firefox chromium vlc flameshot)
 dependencies=(
 	vlc-plugins-all
+	libavcodec-freeworld
 	gvfs-mtp
 	thunar-archive-plugin
 	thunar-volman

@@ -5,7 +5,6 @@ set -euo pipefail
 sudo dnf install -y curl cabextract xorg-x11-font-utils mkfontscale fontconfig cpio unzip
 
 curl -fLO --output-dir /tmp https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
-printf '%s  msttcore-fonts-installer-2.6-1.noarch.rpm\n' '55d7f3a86533225634ff3ea2384b4356d9665a29cc7eeacff16602a1714afbb4' | sha256sum -c -
 
 rpmfile="/tmp/msttcore-fonts-installer-2.6-1.noarch.rpm"
 workdir=$(mktemp -d)

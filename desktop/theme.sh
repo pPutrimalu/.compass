@@ -11,7 +11,7 @@ REPOS=(
 VERSIONS=(main main 20250201)
 DOWNLOAD_PATH=(gtk-theme qt-theme icon-pack)
 
-sudo dnf install -y make dconf sassc kvantum kvantum-qt5 qt5-qtwayland adwaita-cursor-theme
+sudo dnf install -y make dconf sassc qt5ct qt6ct kvantum qt5-qtwayland adwaita-cursor-theme
 
 for i in "${!REPOS[@]}"; do
 	if ! [[ -d /tmp/"${DOWNLOAD_PATH[$i]}" ]]; then
@@ -23,8 +23,9 @@ done
 	mkdir -p "$HOME"/.local/share/themes
 	cd /tmp/gtk-theme
 	./install.sh --dest "$HOME"/.local/share/themes \
+		--color dark \
 		--theme default \
-		--libadwaita system \
+		--libadwaita fixed \
 		--tweaks catppuccin black sharp
 	# --tweaks catppuccin black
 )
