@@ -54,8 +54,8 @@ exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 
 exec waybar
-exec $bin_path/idle daemon
 exec $bin_path/sway-lid-monitor 
+exec $bin_path/idle daemon
 
 exec fcitx5
 exec blueman-applet
@@ -215,6 +215,10 @@ for_window [app_id="firefox"] move container workspace $browser_workspace
 for_window [app_id="chromium"] move container workspace $browser_workspace
 for_window [app_id="thunderbird"] move container workspace $email_workspace
 
+for_window [app_id="org.xfce.ristretto"] {
+    floating enable
+    resize set 900px 700px
+}
 for_window [app_id="pavucontrol"] {
     floating enable
     resize set 800px 600px

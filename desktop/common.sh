@@ -3,7 +3,7 @@
 clear
 
 core=(tmux fzf btop trash-cli)
-apps=(foot firefox chromium mpv flameshot kdeconnect)
+apps=(foot firefox chromium vlc flameshot kdeconnect)
 dependencies=(
 	vlc-plugins-all
 	gvfs-mtp
