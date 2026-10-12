@@ -3,7 +3,7 @@
 clear
 
 fonts=(inter-font ttf-dejavu ttf-liberation noto-fonts-emoji ttf-jetbrains-mono-nerd)
-theme=(make dconf sassc nwg-look kvantum kvantum-qt5 qt5-wayland adwaita-cursors)
+theme=(make dconf sassc nwg-look kvantum qt5-wayland adwaita-cursors)
 
 sudo pacman -S --noconfirm "${fonts[@]}" "${theme[@]}"
 
@@ -52,6 +52,3 @@ dconf write /org/gnome/desktop/interface/gtk-theme "'Colloid-Dark-Compact-Catppu
 dconf write /org/gnome/desktop/wm/preferences/theme "'Colloid-Dark-Compact-Catppuccin'"
 dconf write /org/gnome/desktop/interface/color-scheme "'prefer-dark'"
 dconf write /org/gnome/desktop/interface/icon-theme "'Papirus-Dark'"
-
-systemctl --user daemon-reload
-systemctl --user enable --now sway-lid-monitor.service
