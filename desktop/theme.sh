@@ -11,7 +11,7 @@ REPOS=(
 VERSIONS=(main main 20250201)
 DOWNLOAD_PATH=(gtk-theme qt-theme icon-pack)
 
-sudo dnf install -y make dconf sassc qt5ct qt6ct kvantum qt5-qtwayland adwaita-cursor-theme
+sudo dnf install -y make dconf sassc kvantum qt5-qtwayland adwaita-cursor-theme
 
 for i in "${!REPOS[@]}"; do
 	if ! [[ -d /tmp/"${DOWNLOAD_PATH[$i]}" ]]; then

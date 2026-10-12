@@ -13,5 +13,5 @@ sudo tee /etc/dnf/dnf.conf <<-EOF
 	keepcache=True
 EOF
 
-sudo dnf update -y
 sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf update -y
