@@ -7,4 +7,5 @@ sudo pacman -S --noconfirm --needed iptables \
 	firewalld \
 	firewall-config \
 	firewall-applet
+
 sudo systemctl enable firewalld
